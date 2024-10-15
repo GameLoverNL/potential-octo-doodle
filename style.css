@@ -32,14 +32,14 @@ header nav > a {
 header nav a.nav-link {
     display: block;
     box-sizing: border-box;
-    padding: 0.5rem 0.5rem 0.5rem 0rem;
+    padding: 0.25rem;
     text-align: center;
     margin: 0.25rem;
     border-radius: 1rem;
     background-color: #4B0082;
     box-shadow: -0.1rem 0.15rem #fff;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #E6E6FA;
     font-weight: 400;
