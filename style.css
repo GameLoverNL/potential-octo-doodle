@@ -5,12 +5,13 @@
 }
 
 header {
-    position: absolute;
+    position: relative;
+    z-index: 10;
     height: 100dvh;
-    width: 10dvw;
-    /* background-color: red; */
+    max-width: 10dvw;
+    /* background-color: green; */
     box-shadow: 0.5rem 0rem 0.25rem #800080;
-    border-radius: 1rem 1rem;
+    border-radius: 0 1rem 1rem 0;
 }
 
 header nav {
@@ -20,9 +21,13 @@ header nav {
     gap: 0.25rem;
 }
 
+header nav img {
+    border-radius: 1rem;
+}
+
 img {
     max-width: 100%;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 
 header nav > a {
@@ -44,4 +49,61 @@ header nav a.nav-link {
     color: #E6E6FA;
     font-weight: 400;
     text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+main .main-content {
+    padding: 3%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+main .main-grid {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+
+    max-width: 80%; /* According to screen size, create media query */
+    max-height: 80%; /* According to screen size, create media query */
+
+    margin: 0 auto;
+    grid-template-areas: 
+        "user user user"
+        "tasks messages other"
+        "tasks messages other";
+}
+
+.main-grid > * {
+    border: 1px solid green;
+}
+
+.main-grid > div {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(129, 133, 137);
+}
+
+.user {
+    grid-area: user;
+}
+
+.divider {
+    grid-area: divider;
+}
+
+.tasks {
+    grid-area: tasks;
+}
+
+.messages {
+    grid-area: messages;
+}
+
+.other {
+    grid-area: other;
 }
