@@ -6,6 +6,10 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Jorian's GMS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation bar -->
@@ -40,11 +44,33 @@
 
          <div class="main-content">
              <div class="main-grid">
-                <div class="user">Username - Department | Time</div>
+                <div class="user">
+                    <div>
+                        <h3 id="username">Username</h3>
+                        <p id="department">Department</p>
+                    </div>
+                    <div>
+                        <time id="time_display" datetime="12:00">12:00</time>
+                    </div>
+                </div>
                 <!-- <div class="divider"></div> Empty row for spacing -->
-                <div class="tasks">Tasks</div>
-                <div class="messages">Messages</div>
-                <div class="other">Other</div>
+                <div class="tasks">
+                    <h4 id="tasks">Tasks</h4>
+                    <div class="task-list">
+                        <div class="task">
+                            <p>Lorem, ipsum.</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="messages">
+                    <h4 id="messages">Messages</h4>
+                </div>
+                <div class="other">
+                    <h4 id="other">Other</h4>
+                </div>
              </div>
          </div>
     </main>
